@@ -1,0 +1,134 @@
+/* ── Base ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f9;
+  color: #222;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+a { color: #1a4aaa; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Navbar ── */
+.navbar {
+  background: #1c2b4a;
+  padding: 0 2rem;
+  display: flex;
+  gap: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  color: rgba(255,255,255,0.75);
+  padding: 1rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.navbar a:hover {
+  color: #fff;
+  border-bottom-color: #e8a045;
+  text-decoration: none;
+}
+
+/* ── Container ── */
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  padding: 2.5rem 0 2rem;
+  border-bottom: 2px solid #dde2eb;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1c2b4a;
+  margin-bottom: 0.4rem;
+}
+
+.header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ── Sections ── */
+section {
+  background: #fff;
+  border: 1px solid #dde2eb;
+  border-radius: 8px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.4rem;
+}
+
+section h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1c2b4a;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #e8a045;
+  display: inline-block;
+}
+
+/* ── Tables ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid #eef0f4;
+}
+
+tr:last-child { border-bottom: none; }
+
+td {
+  padding: 0.6rem 0;
+  vertical-align: top;
+}
+
+td.label {
+  width: 160px;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.85rem;
+  padding-right: 1rem;
+}
+
+/* ── Lists ── */
+ul {
+  padding-left: 1.4rem;
+  list-style: disc;
+}
+
+ul li {
+  padding: 0.3rem 0;
+  color: #333;
+}
+
+ul li::marker { color: #e8a045; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .navbar { flex-wrap: wrap; padding: 0 0.5rem; }
+  .navbar a { padding: 0.7rem 0.7rem; font-size: 0.78rem; }
+  section { padding: 1.2rem 1rem; }
+  td.label { width: 120px; }
+}
